@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title><%= TITLE %></title>
+    <link rel='stylesheet' href='stylesheets/style.css'/>
+</head>
+
+<body>
+
+<div id="overlappingHeader">
+    <div id="instructions">
+        <div id="instructions-left-bracket" class="instructions-bracket">{&nbsp;&nbsp;</div>
+        <div id="instructions-text"></div>
+        <div id="instructions-cursor">_</div>
+        <div id="instructions-right-bracket" class="instructions-bracket">&nbsp;&nbsp;}</div>
+    </div>
+
+    <div id="reset">
+        <button id="reset-button">
+            <div id="reset-left-bracket" class="reset-bracket">{&nbsp;&nbsp;</div>
+            <div id="reset-text">Reset</div>
+            <div id="reset-right-bracket" class="reset-bracket">&nbsp;&nbsp;}</div>
+        </button>
+    </div>
+
+</div>
+
+<!-- map -->
+<div id="map"></div>
+
+
+
+
+<!-- jquery 3.3.1 -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<!-- typed 2.0.6 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
+
+<script src="javascripts/index_maps.js"></script>
+
+<script src="javascripts/overlappingHeaderAnimations.js"></script>
+
+<!-- google maps api -->
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= MAPS_API_KEY %>&callback=initMap" async defer></script>
+</body>
+</html>
